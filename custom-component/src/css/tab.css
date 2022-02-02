@@ -1,0 +1,23 @@
+.tab{
+    background-color: #e5e5e5;
+    display: flex;
+}
+.empty-tab{
+    width: 30px;
+    height: 40px;
+}
+.tab-menu{
+    width: 200px;
+    height: 40px;
+    border-radius: 2px;
+    color : #A3A3A3;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.tab-item{
+    margin-top: 100px;
+}
+.selected{
+    background-color: #4904CA;
+    color : white;
+}
