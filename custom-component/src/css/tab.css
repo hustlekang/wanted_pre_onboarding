@@ -13,6 +13,7 @@
     color : #A3A3A3;
     padding: 10px 0;
     box-sizing: border-box;
+    cursor: pointer;
 }
 .tab-item{
     margin-top: 100px;
@@ -20,4 +21,5 @@
 .selected{
     background-color: #4904CA;
     color : white;
+    transition: .7s;
 }

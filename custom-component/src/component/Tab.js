@@ -9,7 +9,6 @@ export default function Tab() {
     }
     return (
         <>  
-                <h1>Tab</h1>    
             <div className="tab ">
                 <div className="empty-tab"/>
                 <div id="0" className={show==='0'?"selected tab-menu":"tab-menu"} onClick={handleClick}>Tab1</div>
@@ -20,8 +19,7 @@ export default function Tab() {
                 {show==='0' && <p>Tab menu ONE</p> }
                 {show==='1' && <p>Tab menu TWO</p> }
                 {show==='2' && <p>Tab menu THREE</p> }
-            </div>
-            
+            </div> 
         </>
     )
 }

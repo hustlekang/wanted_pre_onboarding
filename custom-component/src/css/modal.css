@@ -1,0 +1,42 @@
+.btn-modal{
+    background-color: #4904CA;
+    color: white;
+    width: 130px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 65px;
+    font-size: 16px;
+}
+.modal{
+    width: 400px;
+    height: 100px;
+    border-radius: 15px;
+    background-color:white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+}
+.btn-close{
+    margin: 5px 0 10px;  
+}
+.modal .btn-close span{
+    cursor: pointer;
+}
+.modal-text{
+    color:#4904CA;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor: default;
+}
+.dimmer{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: lightgray;
+}

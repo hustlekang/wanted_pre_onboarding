@@ -12,7 +12,6 @@ export default function ClickToEdit() {
     
     return (
         <div>
-            <h1>ClickToEdit</h1>
             <label htmlFor="id" style={{marginRight:"10px"}}>이름</label>
             <input id="name" defaultValue={name} onBlur={handleBlur}></input>
             <br/>
