@@ -5,7 +5,7 @@ import Tab from './component/Tab';
 import AutoComplete from './component/AutoComplete';
 import Modal from './component/Modal';
 import Tag from './component/Tag';
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 
 function App() {
   const [show,setShow] = useState({
