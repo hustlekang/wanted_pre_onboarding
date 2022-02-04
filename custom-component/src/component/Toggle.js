@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../css/toggle.css'
+import '../css/Toggle.css'
 
 export default function Toggle() {
     const [isToggle,setisToggle] = useState(false)

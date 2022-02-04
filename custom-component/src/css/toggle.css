@@ -5,22 +5,22 @@
     background-color: lightgray;
     padding: 5px;
     box-sizing: border-box;
-    transition: .7s;
+    transition: .6s;
     margin: auto;
 }
 .outline-toggle-on{
     background-color:#4904CA;;
-    transition: .7s;
+    transition: .6s;
 }
 .circle{
     width: 40px;
     height: 40px;
     border-radius: 100%;
     background-color: white;
-    transition: .7s;
+    transition: .6s;
     cursor: pointer;
 }
 .toggle-on{
     margin-left: 80px;   
-    transition: .7s;
+    transition: .6s;
 }

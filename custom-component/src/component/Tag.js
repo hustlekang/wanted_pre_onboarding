@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../css/tag.css'
+import '../css/Tag.css'
 
 export default function Tag() {
     const [tag, setTag] = useState(["CodeStates","JJang"])

@@ -1,19 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
+import '../css/AutoComplete.css'
 
 export default function AutoComplete() {
-    
-    const dataList = (
-        <datalist id="fruits">
-            <option>바나나</option>
-            <option>사과</option>
-            <option>망고</option>
-        </datalist>
-        )
+    const [userInput,setUserInput] = useState("")
+    const [recentSearch,setRecentSearch]=useState(['refurbished','antique','vintage','중고A급','rustic'])
 
+    const handleChange = (event)=>{
+        setUserInput(event.target.value)
+    }
+    const handleKeyPress = (event) =>{
+        if (event.key==='Enter') {
+            setRecentSearch([...recentSearch,userInput])
+            setUserInput("")
+        }
+    }
     return (
-        <div>
-            <input type="search" autoComplete="on"/>
-            {/* {dataList} */}
+        <div className="autoComplete">
+            <input 
+                type="search"
+                list="recentSearch" 
+                value={userInput} 
+                onChange={handleChange} 
+                onKeyPress={handleKeyPress}
+            />
+            <datalist id="recentSearch">
+                {recentSearch.map((word)=>(
+                    <option key={word} value={word}/>
+                ))}
+            </datalist>
         </div>
     )
 }
