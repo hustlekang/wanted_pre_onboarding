@@ -6,9 +6,11 @@ https://hustlekang-pre-onboarding-course.netlify.app/
 
 ### :computer: demo
 ~~~
-1. cd custom-component
-2. npm install
-3. npm start
+1. git clone https://github.com/hustlekang/wanted_pre_onboarding.git
+2. cd wanted_pre_onboarding
+3. cd custom-component
+4. npm install
+5. npm start
 ~~~
 
 ## 구현한 컴포넌트
