@@ -14,8 +14,10 @@ export default function AutoComplete() {
             setUserInput("")
         }
     }
+    
     return (
         <div className="autoComplete">
+            <h1>AutoComplete</h1>
             <input 
                 type="search"
                 list="recentSearch" 

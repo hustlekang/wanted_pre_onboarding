@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+<h1 align= "center">원티드 프리온보딩 프론트엔드 코스 선발과제</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### :house: URL
+https://hustlekang-pre-onboarding-course.netlify.app/
 
-In the project directory, you can run:
+### :computer: demo
+~~~
+1. npm install
+2. npm start
+~~~
 
-### `npm start`
+## 구현한 컴포넌트
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+:black_small_square:  Toggle\
+:black_small_square: Modal\
+:black_small_square: Tab\
+:black_small_square: Tag\
+:black_small_square: AutoComplete\
+:black_small_square: ClicktoText
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### :white_check_mark: Toggle
+~~~
+on,off 를 state로 관리 (true,false)
+on일 때 추가로 class를 부여 -> css 적용
+background-color,토글의 동그라미 부분의 margin-left,transition을 통해 애니메이션 효과 적용
+~~~
+~~~
+동그라미 부분을 수평으로 이동시키는 방법에 대해 고민하다
+영역의 크기를 계산하여 좌우 반전된 배치를 갖는 margin값과 transition을 통해 해결
+~~~
 
-### `npm test`
+### :white_check_mark: Modal
+~~~
+modal의 화면 표시 유무를 위한 값을 state로 관리
+translate,z-index를 통해 modal을 화면의 정중앙 맨 앞에 배치
+alpha=.3인 화면 전체를 덮는 영역을 modal이 보일 때 같이 보이게 설정  
+~~~
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### :white_check_mark: Tab
+~~~
+props로 탭에 표시할 항목이 담긴 tabItem배열을 전달받음
+탭을 누르면 해당 탭의 id를 show변수로 설정
+show값과 같은 id를 갖는 항목만 화면에 표시됨
+~~~
+~~~
+Tab 컴포넌트를 통해 App.js에 모든 컴포넌트를 표시
+~~~
 
-### `npm run build`
+### :white_check_mark: Tag
+~~~
+미리 설정한 tag를 배열에 담아 state로 관리
+배열 내장함수 map()으로 각각의 tag를 요소로 만듬 
+Enter키가 눌리면 사용자의 입력을 기존 state에 추가
+(x)클릭 시 배열 내장함수 filter()를 통해 현재 선택된 태그를 제외한 결과를 state에 반영 
+~~~
+~~~
+컴포넌트를 최대한 나누기 위해
+각각의 태그와, 태그를 삭제하는 (x)영역 2가지를 따로 컴포넌트로 분리
+~~~
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### :white_check_mark: AutoComplete
+~~~
+최근 검색목록을 배열로 만들어 state로 관리
+<option>의 value로 최근 검색목록을 mapping
+위 <option>들을 자식으로 갖는 <datalist>를 <input>과 연결
+Enter키가 눌리면 사용자의 입력을 state에 추가
+~~~
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### :white_check_mark: ClicktoText
+~~~
+이름과 나이를 state로 관리하는 Controlled Component 
+<input>에서 onBlur 이벤트 발생 시, handleBlur 함수 실행 
+<input>의 id와 일치하는 state를 업데이트 
+~~~

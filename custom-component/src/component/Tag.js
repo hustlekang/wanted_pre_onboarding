@@ -24,6 +24,7 @@ export default function Tag() {
 
     return (
         <div> 
+            <h1>Tag</h1>
             <div className={isFocus?"tag-outline tag-outline-focus":"tag-outline" }>
                 <TagItem tagItem={tag} setTag={setTag}/>
                 <input 

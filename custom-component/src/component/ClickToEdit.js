@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import '../css/ClickToEdit.css'
 
 export default function ClickToEdit() {
     const [name, setName] = useState('강현구')
@@ -11,14 +12,22 @@ export default function ClickToEdit() {
     }
     
     return (
-        <div>
-            <label htmlFor="id" style={{marginRight:"10px"}}>이름</label>
-            <input id="name" defaultValue={name} onBlur={handleBlur}></input>
-            <br/>
-            <br/>
-            <label htmlFor="age" style={{marginRight:"10px"}} >나이</label>
-            <input id="age" defaultValue={age}  onBlur={handleBlur}></input>
-            <p>{`이름 : ${name} 나이 : ${age}`}</p>
+        <div> 
+            <h1>ClickToEdit</h1>
+            <ul>
+                <li>
+                    <label htmlFor="id">이름</label>
+                    <input className='input-text' id="name" defaultValue={name} onBlur={handleBlur}></input>
+                </li>
+                <li>
+                    <label htmlFor="age">나이</label>
+                    <input className='input-text' id="age" defaultValue={age}  onBlur={handleBlur}></input>
+                </li>
+                <li>
+                    <span>이름 : {name}</span>
+                    <span>나이 : {age}</span>
+                </li>
+            </ul>
         </div>
     )
 }

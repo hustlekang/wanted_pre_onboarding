@@ -6,6 +6,7 @@ export default function Modal() {
     
     return (
         <div>
+            <h1>Modal</h1>
             <button className="btn-modal" onClick={()=>setIsOpen(true)}>Open Modal</button>
 
             {isOpen && 

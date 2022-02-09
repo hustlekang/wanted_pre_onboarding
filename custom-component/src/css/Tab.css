@@ -1,6 +1,8 @@
 .tab{
     background-color: #e5e5e5;
     display: flex;
+    max-width: 600px;
+    margin: auto;
 }
 .empty-tab{
     width: 30px;
