@@ -6,7 +6,7 @@ https://hustlekang-pre-onboarding-course.netlify.app/
 
 ### :computer: demo
 ~~~
-1. cd components
+1. cd custom-component
 2. npm install
 3. npm start
 ~~~
