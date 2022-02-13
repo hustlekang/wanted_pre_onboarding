@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../css/Tag.css'
 
 export default function Tag() {
-    const [tag, setTag] = useState(["CodeStates","JJang"])
+    const [tag, setTag] = useState(["HTML","CSS"])
     const [newTag, setNewTag] = useState("")
     const [isFocus, setIsFocus] = useState(false)
 

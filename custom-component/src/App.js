@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <h1>탭을 클릭하세요!</h1>
-     <Tab tabItem={components}/>
+      <Tab tabItem={components}/>
     </div>
   );
 }

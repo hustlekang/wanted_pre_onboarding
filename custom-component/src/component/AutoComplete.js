@@ -10,7 +10,9 @@ export default function AutoComplete() {
     }
     const handleKeyPress = (event) =>{
         if (event.key==='Enter') {
-            setRecentSearch((pre)=>[...pre,userInput])
+            if (recentSearch.find(tag => tag ===userInput)===undefined){
+                setRecentSearch((pre)=>[...pre,userInput])
+            }
             setUserInput("")
         }
     }

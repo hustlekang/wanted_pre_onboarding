@@ -66,7 +66,10 @@ Enter키가 눌리면 사용자의 입력을 기존 state에 추가
 위 <option>들을 자식으로 갖는 <datalist>를 <input>과 연결
 Enter키가 눌리면 사용자의 입력을 state에 추가
 ~~~
-
+~~~
+같은 검색어를 입력해도 추천어에 동일한 이름으로 항목이 추가되는 문제 발생
+현재 검색어가 최근검색목록 배열에 없을 때에만 추가하도록 코드 수정
+~~~
 ### :white_check_mark: ClicktoText
 ~~~
 이름과 나이를 state로 관리하는 Controlled Component 

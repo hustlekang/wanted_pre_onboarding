@@ -6,6 +6,8 @@
     cursor: pointer;
     border-radius: 65px;
     font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 .modal{
     width: 400px;
